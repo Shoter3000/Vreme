@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__02d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_02d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_pressure.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/pressure.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__04n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_04n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_humidity.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/humidity.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_wind.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/wind.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__13d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_13d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_sunset.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/sunset.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.vreme.app-main-32:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__04d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_04d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/layout_activity_main.xml.flat",
+        "source": "com.example.vreme.app-main-32:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__9d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_9d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__03n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_03n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_background.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/background.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/font_montserrat.xml.flat",
+        "source": "com.example.vreme.app-main-32:/font/montserrat.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_temperature.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/temperature.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__10n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_10n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_sunrise.png.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/sunrise.png"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_background2.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/background2.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__03d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_03d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__13n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_13n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__01n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_01n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/xml_backup_rules.xml.flat",
+        "source": "com.example.vreme.app-main-32:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__10d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_10d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__09n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_09n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__50n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_50n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__50d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_50d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__02n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_02n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__11d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_11d.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vreme.app-main-32:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__11n.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_11n.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable__01d.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/_01d.xml"
+    }
+]
