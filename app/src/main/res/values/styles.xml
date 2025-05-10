@@ -1,0 +1,7 @@
+<resources>
+    <style name="CustomAlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@drawable/background2</item>
+    </style>
+
+</resources>

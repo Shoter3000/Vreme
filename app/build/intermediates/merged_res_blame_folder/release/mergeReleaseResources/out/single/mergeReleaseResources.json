@@ -120,6 +120,10 @@
         "source": "com.example.vreme.app-main-32:/drawable/_10n.xml"
     },
     {
+        "merged": "com.example.vreme.app-release-31:/layout_dialog_city_input.xml.flat",
+        "source": "com.example.vreme.app-main-32:/layout/dialog_city_input.xml"
+    },
+    {
         "merged": "com.example.vreme.app-release-31:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
         "source": "com.example.vreme.app-main-32:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
@@ -180,12 +184,20 @@
         "source": "com.example.vreme.app-main-32:/drawable/_11d.xml"
     },
     {
+        "merged": "com.example.vreme.app-release-31:/layout_custom_dialog.xml.flat",
+        "source": "com.example.vreme.app-main-32:/layout/custom_dialog.xml"
+    },
+    {
         "merged": "com.example.vreme.app-release-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.vreme.app-main-32:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "com.example.vreme.app-release-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.vreme.app-main-32:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vreme.app-release-31:/drawable_dialog_background.xml.flat",
+        "source": "com.example.vreme.app-main-32:/drawable/dialog_background.xml"
     },
     {
         "merged": "com.example.vreme.app-release-31:/drawable__11n.xml.flat",

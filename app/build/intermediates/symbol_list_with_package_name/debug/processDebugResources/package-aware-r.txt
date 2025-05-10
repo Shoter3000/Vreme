@@ -1370,6 +1370,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2977,6 +2980,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dialog_background
 drawable humidity
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
@@ -3188,7 +3192,6 @@ id checkbox
 id checked
 id chronometer
 id circle_center
-id cityNameInput
 id cityNameText
 id clear_text
 id clip_horizontal
@@ -3227,6 +3230,9 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id detailsLayout
+id dialogButton
+id dialogMessage
+id dialogTitle
 id dialog_button
 id dimensions
 id direct
@@ -3303,6 +3309,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputCity
 id invisible
 id inward
 id italic
@@ -3712,6 +3719,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_city_input
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4229,6 +4237,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style CustomAlertDialog
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text

@@ -11,6 +11,7 @@
   <androidx.ads/>
   <androidx.annotation/>
   <androidx.appcompat/>
+  <androidx.appfunctions/>
   <androidx.appsearch/>
   <androidx.arch.core/>
   <androidx.asynclayoutinflater/>
@@ -46,6 +47,7 @@
   <androidx.core/>
   <androidx.core.uwb/>
   <androidx.credentials/>
+  <androidx.credentials.providerevents/>
   <androidx.credentials.registry/>
   <androidx.cursoradapter/>
   <androidx.customview/>

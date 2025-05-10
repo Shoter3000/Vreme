@@ -18,6 +18,9 @@
         <item>@font/montserrat</item>
     </array>
     <color name="black">#FF000000</color>
+    <color name="colorAccent">#FFBF00</color>
+    <color name="colorPrimary">#2B3A67</color>
+    <color name="colorPrimaryDark">#1A2A48</color>
     <color name="ic_launcher_background">#84D149</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Vreme</string>
@@ -25,6 +28,10 @@
     <style name="Base.Theme.Vreme" parent="Theme.Material3.DayNight.NoActionBar">
         
         
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@drawable/background2</item>
     </style>
     <style name="Theme.Vreme" parent="Base.Theme.Vreme"/>
 </resources>

@@ -11,48 +11,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/cityNameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Vnesi ime kraja"
-            android:backgroundTint="@android:color/transparent"
-            android:inputType="textNoSuggestions"
-            android:imeOptions="actionDone"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="#EFEFEF"
-            android:textColorHint="#BFBFBF"
-            android:gravity="center"
-            android:fontFamily="@font/montserrat"
-            android:textSize="24sp"
-            android:layout_marginTop="20dp" />
 
 
     <Button
         android:id="@+id/fetchWeatherButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cityNameInput"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#2B3A67"
         android:fontFamily="@font/montserrat"
-        android:text="Poišči kraj"
+        android:text="Poišči kraj ⌕"
         android:textColor="#FFF"
         android:textSize="20sp"
         />
 
-    <TextView
-        android:id="@+id/cityNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fetchWeatherButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/montserrat"
-        android:text=""
-        android:textSize="36sp"
-        android:textColor="@color/white"
-        />
+        <TextView
+            android:id="@+id/cityNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fetchWeatherButton"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text=""
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAlignment="center"
+            />
+
 
     <TextView
         android:id="@+id/temperatureText"
@@ -82,17 +68,19 @@
         android:contentDescription="Weather Icon"
         />
 
-    <TextView
-        android:id="@+id/descriptionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/weatherIcon"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/montserrat"
-        android:text=""
-        android:textSize="28sp"
-        />
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weatherIcon"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:text=""
+            android:textSize="28sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            />
+
 
 
     <LinearLayout
@@ -338,6 +326,7 @@
         android:autoLink="web"
         android:linksClickable="true"
         android:textColorLink="@color/white"
+        android:textAlignment="center"
         />
 
 

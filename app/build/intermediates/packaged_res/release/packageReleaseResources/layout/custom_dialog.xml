@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Napaka"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vneseno ime kraja ni pravilno."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/dialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="V redu"
+        android:backgroundTint="#2B3A67"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

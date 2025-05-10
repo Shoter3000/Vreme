@@ -2,7 +2,10 @@ package com.example.vreme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +29,8 @@ import android.text.method.LinkMovementMethod;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+
+import androidx.appcompat.app.AlertDialog;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -54,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         descriptionText = findViewById(R.id.descriptionText);
         weatherIcon = findViewById(R.id.weatherIcon);
         refreshButton  = findViewById(R.id.fetchWeatherButton);
-        cityNameInput = findViewById(R.id.cityNameInput);
         feelsLikeText = findViewById(R.id.feelsLikeText);
         pressureText = findViewById(R.id.pressureText);
         sunriseText = findViewById(R.id.sunriseText);
@@ -65,17 +69,36 @@ public class MainActivity extends AppCompatActivity {
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String cityName = cityNameInput.getText().toString();
-                if(!cityName.isEmpty())
-                {
-                    FetchWeatherData(cityName);
-                }
-                else
-                {
-                    cityNameInput.setError("Vnesi ime kraja");
-                }
+                // Inflate custom layout
+                LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
+                View dialogView = inflater.inflate(R.layout.dialog_city_input, null);
+
+                EditText input = dialogView.findViewById(R.id.inputCity);
+
+                // Uporabi MaterialAlertDialog z želenim slogom
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.CustomAlertDialog);
+
+                builder.setView(dialogView);
+                builder.setPositiveButton("Poišči", (dialog, which) -> {
+                    String cityName = input.getText().toString().trim();
+                    if (!cityName.isEmpty()) {
+                        FetchWeatherData(cityName);
+                    }
+                });
+
+                builder.setNegativeButton("Prekliči", (dialog, which) -> dialog.cancel());
+
+                // Ustvari dialog in nastavi transparentno ozadje
+                AlertDialog dialog = builder.create();
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
+
+
+
+
+
 
 
 
@@ -83,27 +106,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void FetchWeatherData(String cityName) {
-        String url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + API_KEY + "&units=metric&lang=sl";
+
+        String url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName +
+                "&appid=" + API_KEY + "&units=metric&lang=sl";
+
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.execute(() -> {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url(url).build();
-            try {
-                Response response = client.newCall(request).execute();
-                String result = response.body().string();
 
-                if (response.isSuccessful()) {
+            try (Response response = client.newCall(request).execute()) {
+                if (response.isSuccessful() && response.body() != null) {
+                    String result = response.body().string();
                     runOnUiThread(() -> updateUI(result));
                 } else {
-                    runOnUiThread(() -> cityNameInput.setError("Vneseno ime kraja ni pravilno."));
+                    runOnUiThread(() ->
+                            showCustomDialog("Vneseno ime kraja ni pravilno.")
+                    );
                 }
-
             } catch (IOException e) {
                 e.printStackTrace();
-                runOnUiThread(() -> cityNameInput.setError("Napaka pri povezavi."));
+                runOnUiThread(() ->
+                        showCustomDialog("Napaka pri povezavi.")
+                );
             }
         });
     }
+
+
 
 
     private void updateUI(String result)
@@ -152,4 +182,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void showCustomDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+        TextView dialogMessage = dialogView.findViewById(R.id.dialogMessage);
+        Button dialogButton = dialogView.findViewById(R.id.dialogButton);
+
+        dialogMessage.setText(message);
+        dialogButton.setOnClickListener(v -> dialog.dismiss());
+
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.show();
+    }
+
 }
