@@ -24,10 +24,6 @@
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-33:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.vreme.app-debug-31:/layout_activity_main.xml.flat",
-        "source": "com.example.vreme.app-main-33:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-debug-31:\\layout_custom_dialog.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-33:\\layout\\custom_dialog.xml"
     },
@@ -98,6 +94,10 @@
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-debug-31:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.vreme.app-debug-31:/layout_dialog_city_input.xml.flat",
+        "source": "com.example.vreme.app-main-33:/layout/dialog_city_input.xml"
     },
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-debug-31:\\drawable__01d.xml.flat",

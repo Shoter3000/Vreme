@@ -40,26 +40,29 @@
             />
 
 
-    <TextView
-        android:id="@+id/temperatureText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/montserrat"
-        android:text=""
-        android:textColor="#FFBF00"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        android:layout_below="@id/cityNameText"/>
+        <TextView
+            android:id="@+id/temperatureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text=""
+            android:textColor="#FFBF00"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_below="@id/cityNameText"
+            android:translationX="5dp" />
+
 
 
 
     <ImageView
         android:id="@+id/weatherIcon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_below="@id/temperatureText"
         android:layout_centerHorizontal="true"
         android:elevation="12dp"
