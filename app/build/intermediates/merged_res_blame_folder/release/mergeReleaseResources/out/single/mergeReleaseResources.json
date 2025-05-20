@@ -20,6 +20,10 @@
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "com.example.vreme.app-release-31:/layout_forecast_item.xml.flat",
+        "source": "com.example.vreme.app-main-32:/layout/forecast_item.xml"
+    },
+    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -32,16 +36,20 @@
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
+        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\card_background.xml"
+    },
+    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable_background2.xml.flat",
-        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\background2.xml"
-    },
-    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable__04n.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\_04n.xml"
+    },
+    {
+        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable_background2.xml.flat",
+        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\background2.xml"
     },
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable_ic_launcher_foreground.xml.flat",
@@ -72,10 +80,6 @@
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.vreme.app-release-31:/layout_activity_main.xml.flat",
-        "source": "com.example.vreme.app-main-32:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -90,10 +94,6 @@
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\layout_custom_dialog.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\layout\\custom_dialog.xml"
-    },
-    {
-        "merged": "com.example.vreme.app-release-31:/layout_dialog_city_input.xml.flat",
-        "source": "com.example.vreme.app-main-32:/layout/dialog_city_input.xml"
     },
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable__50n.xml.flat",
@@ -118,6 +118,10 @@
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable__03d.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\_03d.xml"
+    },
+    {
+        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\layout_forecast_item.xml.flat",
+        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\layout\\forecast_item.xml"
     },
     {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\drawable__13d.xml.flat",
@@ -208,11 +212,11 @@
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\drawable\\_50d.xml"
     },
     {
-        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-release-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nejcb\\.gradle\\daemon\\8.11.1\\com.example.vreme.app-main-32:\\mipmap-hdpi\\ic_launcher.webp"
     }
 ]

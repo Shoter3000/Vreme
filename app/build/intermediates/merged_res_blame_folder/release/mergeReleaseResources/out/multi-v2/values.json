@@ -63,9 +63,9 @@
                     "from": {
                         "startLines": "1,2",
                         "startColumns": "4,4",
-                        "startOffsets": "17,61",
+                        "startOffsets": "16,59",
                         "endColumns": "42,143",
-                        "endOffsets": "55,200"
+                        "endOffsets": "54,198"
                     },
                     "to": {
                         "startLines": "1986,2114",
@@ -97,10 +97,10 @@
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",
-                        "startOffsets": "102,327",
+                        "startOffsets": "100,320",
                         "endLines": "5,7",
                         "endColumns": "12,58",
-                        "endOffsets": "319,381"
+                        "endOffsets": "314,374"
                     },
                     "to": {
                         "startLines": "2555,6533",

@@ -7,44 +7,40 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-    <Button
-        android:id="@+id/fetchWeatherButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="#2B3A67"
-        android:fontFamily="@font/montserrat"
-        android:text="Poišči kraj ⌕"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/fetchWeatherButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#2B3A67"
+            android:fontFamily="@font/montserrat"
+            android:text="Poišči kraj ⌕"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/cityNameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fetchWeatherButton"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat"
             android:text=""
             android:textSize="36sp"
             android:textColor="@color/white"
             android:gravity="center"
-            android:textAlignment="center"
-            />
-
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/temperatureText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat"
             android:text=""
@@ -52,286 +48,280 @@
             android:textSize="60sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_below="@id/cityNameText"
-            android:translationX="5dp" />
+            android:textAlignment="center" />
 
-
-
-
-    <ImageView
-        android:id="@+id/weatherIcon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@id/temperatureText"
-        android:layout_centerHorizontal="true"
-        android:elevation="12dp"
-        android:src="@drawable/_01d"
-        android:contentDescription="Weather Icon"
-        />
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/_01d"
+            android:contentDescription="Weather Icon" />
 
         <TextView
             android:id="@+id/descriptionText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/weatherIcon"
             android:textColor="@color/white"
             android:fontFamily="@font/montserrat"
             android:text=""
             android:textSize="28sp"
             android:gravity="center"
             android:textAlignment="center"
-            />
+            android:layout_marginTop="8dp" />
 
-
-
-    <LinearLayout
-        android:id="@+id/detailsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        android:layout_below="@id/descriptionText"
-        android:background="@drawable/background2"
-        android:padding="8dp"
-        >
-
-        <!-- Prva vrstica: Vlažnost in veter -->
+        <!-- Weather details (vlažnost, veter, itd.) -->
         <LinearLayout
+            android:id="@+id/detailsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:background="@drawable/background2"
+            android:padding="8dp">
 
-            <!-- Vlažnost -->
+            <!-- 1. vrstica -->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:gravity="center">
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/humidity" />
-
-                <TextView
-                    android:id="@+id/humidityText"
-                    android:layout_width="wrap_content"
+                <!-- Vlažnost -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/humidity" />
+
+                    <TextView
+                        android:id="@+id/humidityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vlažnost"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
+
+                <!-- Veter -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Vlažnost"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/wind" />
+
+                    <TextView
+                        android:id="@+id/windText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Veter"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Veter -->
+            <!-- 2. vrstica -->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/wind" />
-
-                <TextView
-                    android:id="@+id/windText"
-                    android:layout_width="wrap_content"
+                <!-- Občutek -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/temperature" />
+
+                    <TextView
+                        android:id="@+id/feelsLikeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Občutek"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
+
+                <!-- Tlak -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Veter"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/pressure" />
+
+                    <TextView
+                        android:id="@+id/pressureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tlak"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 3. vrstica -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <!-- Vzhod -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/sunrise" />
+
+                    <TextView
+                        android:id="@+id/sunriseText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vzhod"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
+
+                <!-- Zahod -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/sunset" />
+
+                    <TextView
+                        android:id="@+id/sunsetText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zahod"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Druga vrstica: Občutek in tlak -->
+        <!-- Napoved -->
         <LinearLayout
+            android:id="@+id/forecastLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/background2"
+            android:layout_marginTop="16dp" />
 
-            <!-- Občutek -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/temperature" />
-
-                <TextView
-                    android:id="@+id/feelsLikeText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Občutek"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-            </LinearLayout>
-
-            <!-- Tlak -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/pressure" />
-
-                <TextView
-                    android:id="@+id/pressureText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tlak"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Tretja vrstica: Vzhod in zahod -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Vir -->
+        <TextView
+            android:id="@+id/dataSourceText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/openweather_credit"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textColorLink="@color/white"
+            android:textAlignment="center" />
 
-            <!-- Vzhod -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/sunrise" />
-
-                <TextView
-                    android:id="@+id/sunriseText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vzhod"
-                    android:textSize="14sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-            </LinearLayout>
-
-            <!-- Zahod -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/sunset" />
-
-                <TextView
-                    android:id="@+id/sunsetText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Zahod"
-                    android:textSize="14sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/dataSourceText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/detailsLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/openweather_credit"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:fontFamily="@font/montserrat"
-        android:autoLink="web"
-        android:linksClickable="true"
-        android:textColorLink="@color/white"
-        android:textAlignment="center"
-        />
-
-
-
-</RelativeLayout>
 </ScrollView>

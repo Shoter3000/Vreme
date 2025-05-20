@@ -30,6 +30,7 @@ drawable _50n
 drawable _9d
 drawable background
 drawable background2
+drawable card_background
 drawable dialog_background
 drawable humidity
 drawable ic_launcher_background
@@ -42,6 +43,7 @@ drawable wind
 font montserrat
 id cityNameText
 id dataSourceText
+id dayTitle
 id descriptionText
 id detailsLayout
 id dialogButton
@@ -49,6 +51,8 @@ id dialogMessage
 id dialogTitle
 id feelsLikeText
 id fetchWeatherButton
+id forecastLayout
+id hourlyContainer
 id humidityText
 id inputCity
 id pressureText
@@ -60,6 +64,7 @@ id windText
 layout activity_main
 layout custom_dialog
 layout dialog_city_input
+layout forecast_item
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

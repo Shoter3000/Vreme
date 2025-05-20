@@ -2975,6 +2975,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable card_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3217,6 +3218,7 @@ id customPanel
 id cut
 id dataSourceText
 id date_picker_actions
+id dayTitle
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3280,6 +3282,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id forecastLayout
 id forever
 id fragment_container_view_tag
 id frost
@@ -3298,6 +3301,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hourlyContainer
 id humidityText
 id icon
 id icon_group
@@ -3720,6 +3724,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_city_input
+layout forecast_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

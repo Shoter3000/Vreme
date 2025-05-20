@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -20,6 +21,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -32,6 +34,11 @@ import java.util.TimeZone;
 
 import androidx.appcompat.app.AlertDialog;
 
+import org.json.JSONArray;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private TextView cityNameText, temperatureText, humidityText, descriptionText, windText;
@@ -63,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         pressureText = findViewById(R.id.pressureText);
         sunriseText = findViewById(R.id.sunriseText);
         sunsetText = findViewById(R.id.sunsetText);
-
+        LinearLayout forecastLayout = findViewById(R.id.forecastLayout);
 
 
         refreshButton.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     String result = response.body().string();
                     runOnUiThread(() -> updateUI(result));
+                    fetchForecastData(cityName);
                 } else {
                     runOnUiThread(() ->
                             showCustomDialog("Vneseno ime kraja ni pravilno.")
@@ -131,6 +139,91 @@ public class MainActivity extends AppCompatActivity {
                 );
             }
         });
+    }
+
+    private void fetchForecastData(String cityName) {
+        String url = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName +
+                "&appid=" + API_KEY + "&units=metric&lang=sl";
+
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.execute(() -> {
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder().url(url).build();
+
+            try (Response response = client.newCall(request).execute()) {
+                if (response.isSuccessful() && response.body() != null) {
+                    String result = response.body().string();
+                    runOnUiThread(() -> updateForecastUI(result));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+
+    private void updateForecastUI(String json) {
+        try {
+            JSONObject forecastObject = new JSONObject(json);
+            JSONArray list = forecastObject.getJSONArray("list");
+
+            LinearLayout forecastLayout = findViewById(R.id.forecastLayout);
+            forecastLayout.removeAllViews();
+
+            Map<String, List<JSONObject>> dailyForecasts = new LinkedHashMap<>();
+            SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+            SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE", new Locale("sl"));
+            SimpleDateFormat hourFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+
+            for (int i = 0; i < list.length(); i++) {
+                JSONObject item = list.getJSONObject(i);
+                Date date = inputFormat.parse(item.getString("dt_txt"));
+                String day = dayFormat.format(date);
+
+                dailyForecasts.computeIfAbsent(day, k -> new ArrayList<>()).add(item);
+            }
+
+            int daysShown = 0;
+
+            for (Map.Entry<String, List<JSONObject>> entry : dailyForecasts.entrySet()) {
+                if (daysShown >= 3) break;
+
+                // Inflate kartico za en dan
+                View cardView = LayoutInflater.from(this).inflate(R.layout.forecast_item, forecastLayout, false);
+                TextView dayTitle = cardView.findViewById(R.id.dayTitle);
+                LinearLayout hourlyContainer = cardView.findViewById(R.id.hourlyContainer);
+
+                dayTitle.setText(entry.getKey().substring(0, 1).toUpperCase() + entry.getKey().substring(1));
+
+                for (JSONObject item : entry.getValue()) {
+                    JSONObject main = item.getJSONObject("main");
+                    double temp = main.getDouble("temp");
+
+                    String description = item.getJSONArray("weather").getJSONObject(0).getString("description");
+                    String iconCode = item.getJSONArray("weather").getJSONObject(0).getString("icon");
+
+                    Date date = inputFormat.parse(item.getString("dt_txt"));
+                    String time = hourFormat.format(date);
+                    int resId = getResources().getIdentifier("_" + iconCode, "drawable", getPackageName());
+
+                    TextView forecastText = new TextView(this);
+                    forecastText.setText(time + "  •  " + String.format("%.0f°", temp) + "  •  " + description);
+                    forecastText.setTextColor(Color.WHITE);
+                    forecastText.setTextSize(15);
+                    forecastText.setCompoundDrawablesWithIntrinsicBounds(resId, 0, 0, 0);
+                    forecastText.setCompoundDrawablePadding(16);
+                    forecastText.setPadding(0, 6, 0, 6);
+
+                    hourlyContainer.addView(forecastText);
+                }
+
+                forecastLayout.addView(cardView);
+                daysShown++;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
